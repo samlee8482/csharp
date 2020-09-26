@@ -25,7 +25,7 @@ namespace winFormCalc
             btnMR.Enabled = false;
         }
 
-        // 숫자 버튼(btn0~btn9)을 클릭했을 때 처리하는 메소드
+        // 숫자 버튼을 클릭했을 때 처리하는 메소드
         private void btnNumber_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -53,6 +53,7 @@ namespace winFormCalc
                 txtResult.Text += ".";
         }
 
+        // ± 버튼의 처리
         private void btnPlusMinus_Click(object sender, EventArgs e)
         {
             double v = Double.Parse(txtResult.Text);
@@ -95,7 +96,7 @@ namespace winFormCalc
             opFlag = true;
         }
 
-        // = 버튼, 계산 수행하게 됨
+        // =버튼, 계산 수행하게 됨
         private void btnEqual_Click(object sender, EventArgs e)
         {
             Double x = Double.Parse(txtResult.Text);
@@ -226,6 +227,11 @@ namespace winFormCalc
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtResult_TextChanged(object sender, EventArgs e)
         {
 
         }
